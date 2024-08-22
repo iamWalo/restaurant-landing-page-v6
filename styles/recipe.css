@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --first-clr: #EB1412;
+    --second-clr: #101A24;
+    --black-clr: #000000;
+    --white-clr: #fff;
+    --third-clr: #FFD143;
+}
+
+
+.recipe-intro {
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+#recipe-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.recipt-intro-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 20vh;
+}
+
+
+
+.recipe-intro h1 {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Inter', sans-serif;
+    font-size: 61px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+}
+
+.recipes-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+
+.recipes-container-header h2 {
+    color: var(--black-clr);
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 10px;
+}
+
+#big-title h1 {
+    cursor: pointer;
+    color: #101A24;
+    font-family: 'Inter', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+#big-title span {
+    cursor: pointer;
+    color: var(--first-clr);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+}
+
+#small-title h1 {
+    cursor: pointer;
+    color: var(--second-clr);
+    font-family: "Inter";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.trendy-recipes {
+    display: none;
+}
+
+.featured-recipes {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
