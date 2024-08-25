@@ -17,6 +17,10 @@ body {
     --third-clr: #FFD143;
 }
 
+section {
+    transition: all 2s;
+}
+
 .btn {
     height: 45px;
     width: auto;
@@ -69,6 +73,10 @@ h6 {
 
 .content {
     display: none;
+}
+
+p {
+    transition: all 6s;
 }
 
 /*               header                    */
@@ -443,11 +451,18 @@ img.section-1-bottom-left-img {
     align-items: center;
 }
 
+.menu-image {
+    position: relative;
+    z-index: 55;
+}
+
 .menu-image img {
+    position: relative;
     width: 550px;
     height: 550px;
     border-radius: 10px;
     margin: 0 50px;
+    z-index: 55;
 }
 
 .menu-list {
@@ -463,9 +478,12 @@ img.section-1-bottom-left-img {
 }
 
 .menu-item {
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    /*  for aniamtion  */
+    opacity: 0;
 }
 
 .menu-item img {
@@ -869,4 +887,52 @@ video {
     border-radius: 4px;
     background: #4584FF;
     padding: 8px 16px;
+}
+
+.show-from-left {
+    animation: show-from-left 2.5s ease;
+}
+
+.show-from-right {
+    animation: show-from-right 2.5s ease;
+}
+
+.show-item {
+    animation: show-item 3s ease;
+}
+
+.show-from-left,
+.show-from-right,
+.show-item {
+    animation-fill-mode: both;
+}
+
+@keyframes show-from-left {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes show-from-right {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes show-item {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
