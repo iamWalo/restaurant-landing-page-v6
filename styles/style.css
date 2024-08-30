@@ -17,10 +17,6 @@ body {
     --third-clr: #FFD143;
 }
 
-section {
-    transition: all 2s;
-}
-
 .btn {
     height: 45px;
     width: auto;
@@ -167,12 +163,6 @@ div.header-button {
     position: relative;
     overflow: hidden;
     padding: 20px 0;
-}
-
-.recipes-container-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .hero-content {
@@ -323,6 +313,13 @@ img.section-1-bottom-left-img {
 .featured-recipes h2 {
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+
+.recipes-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .featured-recipes h2 span {
@@ -576,7 +573,7 @@ video {
 .testimonials-section {
     padding: 40px 20px 100px 20px;
     background-color: var(--second-clr);
-    height: 80vh;
+    height: 550px;
     position: relative;
 }
 
@@ -890,15 +887,16 @@ video {
 }
 
 .show-from-left {
-    animation: show-from-left 2.5s ease;
+    animation: show-from-left 1s;
 }
 
 .show-from-right {
-    animation: show-from-right 2.5s ease;
+    animation: show-from-right 1s;
 }
 
 .show-item {
-    animation: show-item 3s ease;
+    opacity: 0;
+    animation: show-item 2s ease;
 }
 
 .show-from-left,
@@ -935,4 +933,265 @@ video {
     100% {
         opacity: 1;
     }
+}
+
+/*            resposive desing               */
+@media (max-width: 875px) {
+
+    /* global */
+    div.content {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* header */
+    .sidebar {
+        display: block;
+        position: fixed;
+        overflow-y: hidden;
+        min-width: 60%;
+        height: 100vh;
+        background-color: aqua;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: var(--white-clr);
+        position: absolute;
+        z-index: 5;
+        top: 0px;
+        transform: translateX(150%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: .7s;
+    }
+
+    .show-sidebar {
+        transform: translateX(-5%);
+    }
+
+    #menu-open {
+        z-index: 4;
+        font-size: 25px;
+        position: absolute;
+        display: block;
+        right: 40px;
+    }
+
+    #menu-close {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        top: 30px;
+        left: 78%;
+    }
+
+    .header-center {
+        width: 100%;
+    }
+
+    div.logo {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
+
+    #menu-close,
+    #menu-opne {
+        position: absolute;
+        color: red;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .sidebar nav ul {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 70px;
+        grid-row-gap: 40px;
+    }
+
+    div.header-button {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #4584FF;
+    }
+
+    /*               hero                */
+    .hero-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        min-height: 90vh;
+        position: relative;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .text-section {
+        order: 2;
+        max-width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+
+
+    .section-1-imgs {
+        max-width: 100%;
+        order: 1;
+        margin-left: 8%;
+    }
+
+    .social-icons::after {
+        display: none;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /*           recipes            */
+    .recipes-container {
+        max-width: auto;
+        margin: 0 0;
+        padding: 20px 0 100px 0;
+    }
+
+    .featured-recipes h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+
+    .recipes-container-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vh;
+        padding: 0 20px;
+        margin: 40px 0;
+    }
+
+    .featured-recipes h2 span {
+        color: var(--first-clr);
+    }
+
+    div.recipes-grid {
+        display: grid;
+        width: 110vh;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 25px;
+    }
+
+
+
+    .recipe-card {
+        width: 300px;
+        height: 300px;
+        margin-left: 5px;
+    }
+
+    .img-container img {
+        width: 260px;
+        height: 180px;
+        z-index: 10;
+        border-radius: 8px;
+        margin: 0 12px 15px 12px;
+    }
+
+    .recipe-card h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .recipe-card p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .img-container {
+        background-image: url("../images/food-bg-img-6.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .price-badge,
+    .days-badge {
+        position: absolute;
+        color: var(--white-clr);
+        font-size: 12px;
+        z-index: 5;
+    }
+
+    .days-badge h4 {
+        color: var(--white-clr);
+        font-weight: 400;
+    }
+
+    .days-badge {
+        background-color: #4F5A65;
+        border-radius: 14px 5px;
+        width: 100px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .price-badge {
+        background-image: url("../images/vector.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 38px;
+        height: 35px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .price-badge h4 {
+        color: var(--white-clr);
+        font-weight: 600;
+        position: absolute;
+        right: 10px;
+        top: -5px;
+    }
+
+
+    .view-more {
+        background-color: var(--black-clr);
+    }
+
+    .view-more:hover {
+        opacity: .8;
+    }
+
 }
